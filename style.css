@@ -1,9 +1,10 @@
 body{
     height: 100%;
-    background-image: linear-gradient(#020202, #1a1919);
+    background-image: linear-gradient(#020202, #202020);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    min-height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 header{
@@ -68,18 +69,40 @@ section{
     margin: auto;
     width: 90%;
     padding: 0% 5%;
+    color: rgb(197, 197, 197);
+}
+
+#photo{
+    width: 30%;
+    box-shadow: -3px 3px 25px #a3b0c0;
+    border-radius: 5%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2{
+    text-align: center;
     color: rgb(230, 230, 230);
+}
+
+p{
+    text-align: justify;
+    padding: 2% 0%;
+    font-size: 18px;
 }
 
 footer{
     position:static;
+    bottom: 0;
     margin: 0;
     width: 100%;
     background-image: linear-gradient(#e9c6d3, #d497ad);
     color: black;
-    text-align: center;
 }
 
-p{
+#footer{
+    text-align: center;
     padding: 1%;
+    font-size: 14px;
 }
