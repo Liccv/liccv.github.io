@@ -1,22 +1,41 @@
 body{
     height: 100%;
-    background-image: linear-gradient(#e9c6d3, #d497ad);
+    background-image: linear-gradient(#020202, #1a1919);
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
 header{
+    position: relative;
     text-align: center;
     color: rgb(49, 49, 49);
+    background-color: #020202;
+    margin: 0;
+    padding: 0;
 }
 
+#kot{
+    display: block;
+    margin-left: auto;
+    width: 15%;
+}
+h1{
+    color: white;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 250%;
+    text-shadow: 0px 0px 20px #d497ad;
+
+}
 #mynav{
-    background-image: linear-gradient(#eee5ea, #dfd5da);
+    background-image: linear-gradient(#e9c6d3, #d497ad);
     text-align: center;
 }
 
 #mynav li:hover{
-    background-image: linear-gradient(#dfd5da, #eee5ea);
+    background-image: linear-gradient(#d497ad, #e9c6d3);
 }
 
 #mynav li{
@@ -54,8 +73,8 @@ section{
 }
 
 footer{
-    background-color: rgb(49, 49, 49);
+    background-color: #d497ad;
     width: 90%;
     padding: 0% 5%;
-    color: #dfd5da;
+    color: black;
 }
