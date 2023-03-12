@@ -61,7 +61,7 @@ h1 {
 #mynav a {
   text-decoration: none;
   color: black;
-  font-size: 1.5vw;
+  font-size: 22px;
 }
 
 section {
@@ -83,12 +83,12 @@ section {
 h2 {
   text-align: center;
   color: rgb(230, 230, 230);
-  font-size: 2vw;
+  font-size: 40px;
 }
 
 p {
   text-align: justify;
-  font-size: 1vw;
+  font-size: 20px;
   padding-top: 1%;
 }
 
