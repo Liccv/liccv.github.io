@@ -28,6 +28,7 @@ function startGame() {
     cell.classList.remove(playerO);
     cell.removeEventListener("click", handleCellClick);
     cell.addEventListener("click", handleCellClick, { once: true });
+    cell.innerText = "";
   });
   setBoardHoverClass();
   gameStatus.innerText = `Tura gracza ${OplayerTurn ? "O" : "X"}`;
