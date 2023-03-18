@@ -66,6 +66,7 @@ function isDraw() {
 
 function placeMark(cell, currentPlayer) {
   cell.classList.add(currentPlayer);
+  cell.innerText = `${OplayerTurn ? "O" : "X"}`;
 }
 
 function swapTurns() {
