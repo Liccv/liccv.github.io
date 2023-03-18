@@ -1,4 +1,4 @@
-const cells = document.querySelectorAll("[cell-index]");
+const cells = document.querySelectorAll("[data-cell-index]");
 const gameStatus = document.getElementById("gamestatus");
 const restartButton = document.getElementById("gamerestart");
 var changeMode = document.getElementById("gamemode");
