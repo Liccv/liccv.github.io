@@ -1,8 +1,6 @@
 const cells = document.querySelectorAll("[cell-index]");
-const board = document.getElementById("gamecontainer");
 const gameStatus = document.getElementById("gamestatus");
 const restartButton = document.getElementById("gamerestart");
-const cellindex = document.getElementsByName("cell-index");
 var changeMode = document.getElementById("gamemode");
 let OplayerTurn = false;
 let running = false;
@@ -47,17 +45,17 @@ function handleCellClick(e) {
 }
 
 function computerMove() {
-  cells.forEach((cell) => {
-    cell.removeEventListener("click", handleCellClick);
-  });
-  var randomCell = (randomCell = Math.floor(Math.random() * 10));
-  while (cellindex[randomCell] != null) {
-    randomCell = Math.floor(Math.random() * 10);
+  var randomCell = (randomCell = Math.floor(Math.random() * 9));
+  console.log("Pierwsze losowanie " + randomCell);
+  while (
+    cells[randomCell].innerText == "X" ||
+    cells[randomCell].innerText == "O"
+  ) {
+    randomCell = Math.floor(Math.random() * 9);
+    console.log(randomCell);
   }
   placeMark(cells[randomCell], playerO);
-  cells.forEach((cell) => {
-    cell.addEventListener("click", handleCellClick, { once: true });
-  });
+  cells[randomCell].removeEventListener("click", handleCellClick);
   nextMove(playerO);
 }
 
@@ -68,7 +66,6 @@ function nextMove(currentPlayer) {
     endGame(true);
   } else {
     swapTurns();
-    setBoardHoverClass();
   }
 }
 
