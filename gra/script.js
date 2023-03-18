@@ -2,6 +2,7 @@ const cells = document.querySelectorAll("[cell-index]");
 const board = document.getElementById("gamecontainer");
 const gameStatus = document.getElementById("gamestatus");
 const restartButton = document.getElementById("gamerestart");
+const cellindex = document.getElementsByName("cell-index");
 var changeMode = document.getElementById("gamemode");
 let OplayerTurn = false;
 let running = false;
@@ -25,7 +26,7 @@ changeMode.addEventListener("change", startGame);
 function startGame() {
   running = true;
   OplayerTurn = false;
-  gameMode = document.getElementById("gamemode").checked;
+  twoPlayer = document.getElementById("gamemode").checked;
   cells.forEach((cell) => {
     cell.classList.remove(playerX);
     cell.classList.remove(playerO);
@@ -41,14 +42,33 @@ function handleCellClick(e) {
     const cell = e.target;
     const currentPlayer = OplayerTurn ? playerO : playerX;
     placeMark(cell, currentPlayer);
-    if (checkWin(currentPlayer)) {
-      endGame(false);
-    } else if (isDraw()) {
-      endGame(true);
-    } else {
-      swapTurns();
-      setBoardHoverClass();
-    }
+    nextMove(currentPlayer);
+  }
+}
+
+function computerMove() {
+  cells.forEach((cell) => {
+    cell.removeEventListener("click", handleCellClick);
+  });
+  var randomCell = (randomCell = Math.floor(Math.random() * 10));
+  while (cellindex[randomCell] != null) {
+    randomCell = Math.floor(Math.random() * 10);
+  }
+  placeMark(cells[randomCell], playerO);
+  cells.forEach((cell) => {
+    cell.addEventListener("click", handleCellClick, { once: true });
+  });
+  nextMove(playerO);
+}
+
+function nextMove(currentPlayer) {
+  if (checkWin(currentPlayer)) {
+    endGame(false);
+  } else if (isDraw()) {
+    endGame(true);
+  } else {
+    swapTurns();
+    setBoardHoverClass();
   }
 }
 
@@ -75,6 +95,9 @@ function placeMark(cell, currentPlayer) {
 function swapTurns() {
   OplayerTurn = !OplayerTurn;
   gameStatus.innerText = `Tura gracza ${OplayerTurn ? "O" : "X"}`;
+  if (!twoPlayer && OplayerTurn) {
+    computerMove();
+  }
 }
 
 function checkWin(currentPlayer) {
