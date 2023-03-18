@@ -2,6 +2,7 @@ const cells = document.querySelectorAll("[cell-index]");
 const board = document.getElementById("gamecontainer");
 const gameStatus = document.getElementById("gamestatus");
 const restartButton = document.getElementById("gamerestart");
+var changeMode = document.getElementById("gamemode");
 let OplayerTurn = false;
 let running = false;
 const playerX = "X";
@@ -19,10 +20,12 @@ const winningCombination = [
 
 startGame();
 restartButton.addEventListener("click", startGame);
+changeMode.addEventListener("change", startGame);
 
 function startGame() {
   running = true;
   OplayerTurn = false;
+  gameMode = document.getElementById("gamemode").checked;
   cells.forEach((cell) => {
     cell.classList.remove(playerX);
     cell.classList.remove(playerO);
@@ -30,7 +33,6 @@ function startGame() {
     cell.addEventListener("click", handleCellClick, { once: true });
     cell.innerText = "";
   });
-  setBoardHoverClass();
   gameStatus.innerText = `Tura gracza ${OplayerTurn ? "O" : "X"}`;
 }
 
@@ -73,16 +75,6 @@ function placeMark(cell, currentPlayer) {
 function swapTurns() {
   OplayerTurn = !OplayerTurn;
   gameStatus.innerText = `Tura gracza ${OplayerTurn ? "O" : "X"}`;
-}
-
-function setBoardHoverClass() {
-  board.classList.remove(playerX);
-  board.classList.remove(playerO);
-  if (OplayerTurn) {
-    board.classList.add(playerO);
-  } else {
-    board.classList.add(playerX);
-  }
 }
 
 function checkWin(currentPlayer) {
