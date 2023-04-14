@@ -79,7 +79,7 @@ h1 {
 .toggle-button .bar {
   height: 2px;
   width: 100%;
-  background-color: #000000;
+  background-color: #020202;
   border-radius: 10px;
 }
 
@@ -124,28 +124,49 @@ section {
 .card {
   background-color: #f1e4e9;
   border-radius: 10px;
-  width: 20vw;
+  width: 18vw;
   max-width: 500px;
   margin: 40px auto;
-  padding: 3%;
+  padding: 20px;
+  height: fit-content;
 }
 
 .card img {
-  width: 20vw;
+  width: 18vw;
   max-width: 500px;
   border-radius: 5px;
   box-shadow: 0px 0px 7px #8f8f8f;
 }
 
 .card h2 {
-  color: rgb(10, 10, 10);
-  font-size: 22px;
+  color: #020202;
+  font-size: 24px;
 }
 
 .card p {
   text-align: justify;
-  font-size: 20px;
-  color: #020202;
+  font-size: 18px;
+  color: #202020;
+  margin-bottom: 10px;
+}
+
+#cards button {
+  border: none;
+  font-size: 16px;
+  color: #b6587a;
+  font-weight: bold;
+  background-color: #f1e4e9;
+  padding: 5px 0px;
+}
+
+#cards button:hover {
+  cursor: pointer;
+  background-color: #f1e4e9;
+  text-shadow: 0px 0px 5px #e9c6d3;
+}
+
+.more {
+  display: none;
 }
 
 footer {
