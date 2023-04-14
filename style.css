@@ -22,7 +22,7 @@ header {
   max-width: 12%;
   min-width: 125px;
 }
-h1 {
+header h1 {
   color: #f1e4e9;
   position: absolute;
   top: 20%;
@@ -97,6 +97,17 @@ section {
   margin: auto;
   width: 70%;
   padding: 1% 5%;
+  color: #f1e4e9;
+  text-align: justify;
+}
+
+section p {
+  text-align: justify;
+  font-size: 18px;
+}
+
+section h1 {
+  font-size: 36px;
 }
 
 #cards {
@@ -127,8 +138,6 @@ section {
 }
 
 .card p {
-  text-align: justify;
-  font-size: 18px;
   color: #202020;
   margin-bottom: 10px;
 }
@@ -168,6 +177,10 @@ footer p {
 }
 
 @media (max-width: 950px) {
+  section {
+    width: 85%;
+  }
+
   .toggle-button {
     display: flex;
   }
@@ -208,20 +221,6 @@ footer p {
 
   .card img {
     width: 70vw;
-    max-width: 400px;
-  }
-}
-
-@media (max-width: 480px) {
-  .card {
-    width: 60vw;
-    max-width: 400px;
-    margin: 10px auto;
-    padding: 20px;
-  }
-
-  .card img {
-    width: 60vw;
     max-width: 400px;
   }
 }
