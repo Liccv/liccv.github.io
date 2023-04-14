@@ -50,6 +50,7 @@ h1 {
 
 #mynav ul {
   display: flex;
+  position: relative;
   list-style-type: none;
   justify-content: center;
   margin: 0;
@@ -63,10 +64,11 @@ h1 {
   font-size: 22px;
 }
 
-.toogle-button {
+.toggle-button {
+  position: absolute;
   display: none;
-  top: 1rem;
-  right: 1rem;
+  top: 0px;
+  right: 2rem;
   flex-direction: column;
   justify-content: space-between;
   width: 25px;
@@ -74,7 +76,7 @@ h1 {
   margin: 13px 20px;
 }
 
-.toogle-button .bar {
+.toggle-button .bar {
   height: 2px;
   width: 100%;
   background-color: #000000;
@@ -82,13 +84,26 @@ h1 {
 }
 
 @media (max-width: 950px) {
-  .toogle-button {
+  .toggle-button {
     display: flex;
   }
   .nav {
-    display: none;
+    /* display: none; */
     border-right: 0;
     padding: 0;
+    text-align: center;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  #mynav ul {
+    flex-direction: column;
+  }
+
+  .home {
+    width: 125px;
   }
 }
 
