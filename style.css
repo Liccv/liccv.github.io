@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
 body {
   height: 100%;
   background-image: linear-gradient(#020202, #202020);
@@ -5,6 +6,7 @@ body {
   background-attachment: fixed;
   margin: 0;
   padding: 0;
+  font-family: Raleway;
 }
 
 header {
@@ -31,7 +33,6 @@ h1 {
 
 #mynav {
   background-image: linear-gradient(#e9c6d3, #d497ad);
-  text-align: center;
 }
 
 #mynav li:hover {
@@ -48,20 +49,47 @@ h1 {
 }
 
 #mynav ul {
+  display: flex;
   list-style-type: none;
+  justify-content: center;
   margin: 0;
   padding: 0;
-}
-
-#mynav ul li {
-  display: inline-block;
-  vertical-align: middle;
+  width: 100%;
 }
 
 #mynav a {
   text-decoration: none;
   color: black;
   font-size: 22px;
+}
+
+.toogle-button {
+  display: none;
+  top: 1rem;
+  right: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  margin: 13px 20px;
+}
+
+.toogle-button .bar {
+  height: 2px;
+  width: 100%;
+  background-color: #000000;
+  border-radius: 10px;
+}
+
+@media (max-width: 950px) {
+  .toogle-button {
+    display: flex;
+  }
+  .nav {
+    display: none;
+    border-right: 0;
+    padding: 0;
+  }
 }
 
 section {
