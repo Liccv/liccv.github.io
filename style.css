@@ -36,17 +36,26 @@ h1 {
   background-image: linear-gradient(#e9c6d3, #d497ad);
 }
 
-#mynav li:hover {
+#mynav .nav:hover {
   background-image: linear-gradient(#d497ad, #e9c6d3);
 }
 
-#mynav li {
+#mynav .nav {
   padding: 10px 3%;
   border-right: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-#mynav li:last-child {
+#mynav .nav:last-child {
   border-right: none;
+}
+
+#mynav .home:hover {
+  background-image: linear-gradient(#d497ad, #e9c6d3);
+}
+
+#mynav .home {
+  padding: 10px 3%;
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 #mynav ul {
@@ -168,7 +177,7 @@ footer p {
     justify-content: center;
   }
 
-  #mynav li {
+  #mynav .home {
     border-right: 0px;
   }
 
