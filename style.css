@@ -88,10 +88,13 @@ h1 {
     display: flex;
   }
   .nav {
-    /* display: none; */
-    border-right: 0;
+    display: none;
     padding: 0;
-    text-align: center;
+    justify-content: center;
+  }
+
+  #mynav li {
+    border-right: 0px;
   }
 
   .nav.active {
