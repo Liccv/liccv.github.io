@@ -68,7 +68,7 @@ h1 {
   position: absolute;
   display: none;
   top: 0px;
-  right: 2rem;
+  right: 10px;
   flex-direction: column;
   justify-content: space-between;
   width: 25px;
@@ -81,33 +81,6 @@ h1 {
   width: 100%;
   background-color: #020202;
   border-radius: 10px;
-}
-
-@media (max-width: 950px) {
-  .toggle-button {
-    display: flex;
-  }
-  .nav {
-    display: none;
-    padding: 0;
-    justify-content: center;
-  }
-
-  #mynav li {
-    border-right: 0px;
-  }
-
-  .nav.active {
-    display: flex;
-  }
-
-  #mynav ul {
-    flex-direction: column;
-  }
-
-  .home {
-    width: 125px;
-  }
 }
 
 section {
@@ -182,4 +155,63 @@ footer p {
   text-align: center;
   padding: 1%;
   font-size: 14px;
+}
+
+@media (max-width: 950px) {
+  .toggle-button {
+    display: flex;
+  }
+  .nav {
+    display: none;
+    padding: 0;
+    justify-content: center;
+  }
+
+  #mynav li {
+    border-right: 0px;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  #mynav ul {
+    flex-direction: column;
+  }
+
+  .home {
+    width: 125px;
+    margin-left: 10px;
+  }
+
+  #cards {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    margin-top: 20px;
+  }
+  .card {
+    width: 70vw;
+    max-width: 400px;
+    margin: 15px auto;
+    padding: 20px;
+  }
+
+  .card img {
+    width: 70vw;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 60vw;
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 20px;
+  }
+
+  .card img {
+    width: 60vw;
+    max-width: 400px;
+  }
 }
