@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 
-:root{
-    --delicate_green: #ecf1eb;
-    --white: #f9f9f9;
-    --green: #ddf5ca;
-    --darker_green: #99a98c;
-    --gray: #3c3c3c;
-    --darker_gray: #1a1a1a;
+:root {
+  --delicate_green: #ecf1eb;
+  --white: #f9f9f9;
+  --green: #ddf5ca;
+  --darker_green: #99a98c;
+  --gray: #3c3c3c;
+  --darker_gray: #1a1a1a;
 }
 
 body {
@@ -73,7 +73,22 @@ section h1 {
   padding-bottom: 10px;
 }
 
-.card button {
+.cat_card {
+  position: relative;
+  width: 18vw;
+  max-width: 500px;
+  margin: 40px auto 0px auto;
+  padding: 20px;
+}
+
+.cat_card img {
+  width: 18vw;
+  max-width: 500px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 6px var(--gray);
+}
+
+.cat_card button {
   position: absolute;
   bottom: 10px;
   border: none;
@@ -85,46 +100,62 @@ section h1 {
   padding: 5px 0px;
 }
 
-.card button:hover {
+.cat_card button:hover {
   cursor: pointer;
   background-color: var(--delicate_green);
   text-shadow: 0px 0px 5px var(--darker_green);
 }
 
-.cat_card{
-  position:relative;
-    width: 18vw;
-    max-width: 500px;
-    margin: 40px auto 0px auto;
-    padding: 20px;
+#details {
+  padding: 20px;
 }
 
-.cat_card img {
-    width: 18vw;
-    max-width: 500px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 6px var(--gray);
+#details h1 {
+  margin: 75px 0 20px 0;
+  text-align: center;
 }
 
-#details h1{
-    margin: 75px 0 20px 0;
-    text-align: center;
-}
-
-.general_section{
-    height: 450px;
+.general_section {
+  height: 450px;
+  display: flex;
 }
 
 .general_section img {
-    float: left;
-    margin: 10px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 6px var(--gray);
-  }
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 6px var(--gray);
+}
 
-.history_description{
-    float: left;
-    margin: 10px;
+.history_description {
+  margin: 25px 25px 50px 25px;
+}
+
+.basic_info {
+  border: var(--darker_green) solid;
+  background-color: var(--darker_green);
+  box-shadow: 0 0 10px var(--gray);
+  margin: 0px auto;
+  width: 50%;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.basic_info div {
+  width: 130px;
+  margin: 10px auto 10px auto;
+  color: var(--delicate_green);
+  font-weight: bold;
+}
+
+.row {
+  display: flex;
+  direction: row;
+  align-items: center;
+  text-align: left;
+}
+
+.row i {
+  padding-right: 10px;
 }
 
 footer {
