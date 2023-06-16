@@ -1,6 +1,14 @@
 from django.db import models
 
+class Language(models.Model):
+    language = models.CharField(max_length = 30)
+
+    def __str__(self):
+        return self.language
+
+
 class Color(models.Model):
+    language = models.ForeignKey(Language, on_delete = models.CASCADE)
     color = models.CharField(max_length=20)
 
     def __str__(self):
@@ -8,6 +16,7 @@ class Color(models.Model):
 
 
 class Pattern(models.Model):
+    language = models.ForeignKey(Language, on_delete = models.CASCADE)
     pattern = models.CharField(max_length = 20)
 
     def __str__(self):
@@ -15,6 +24,7 @@ class Pattern(models.Model):
 
 
 class CharacterTrait(models.Model):
+    language = models.ForeignKey(Language, on_delete = models.CASCADE)
     character_trait = models.CharField(max_length = 20)
 
     def __str__(self):
@@ -22,8 +32,10 @@ class CharacterTrait(models.Model):
 
 
 class Cat(models.Model):
+    language = models.ForeignKey(Language, on_delete = models.CASCADE)
     name = models.CharField(max_length = 50)
-    image = models.ImageField()
+    image = models.ImageField(upload_to = 'photos/')
+    short_description = models.CharField(max_length = 250)
     history = models.CharField(max_length = 600)
     lifespan_min = models.IntegerField()
     lifespan_max = models.IntegerField()
@@ -41,3 +53,13 @@ class Cat(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class WebsiteContent(models.Model):
+    language = models.ForeignKey(Language, on_delete=models.CASCADE)
+    title = models.CharField(max_length = 15)
+    button_text = models.CharField(max_length = 30)
+    years_text = models.CharField(max_length = 15)
+
+    def __str__(self):
+        return self.title
