@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
 
 :root {
   --delicate_green: #ecf1eb;
@@ -19,7 +20,6 @@ body {
 
 header {
   position: relative;
-  text-align: center;
   color: rgb(49, 49, 49);
   background-image: linear-gradient(var(--green), var(--darker_green));
   height: 100px;
@@ -61,6 +61,7 @@ section h1 {
   background-color: var(--delicate_green);
   border-radius: 10px;
   box-shadow: 0px 0px 20px var(--darker_green);
+  margin-top: 15px;
 }
 
 .card h2 {
@@ -107,35 +108,47 @@ section h1 {
 }
 
 #details {
+  max-width: 2100px;
+  margin: 0 auto;
   padding: 20px;
 }
 
 #details h1 {
+  font-family: "Raleway", sans-serif;
   margin: 75px 0 20px 0;
   text-align: center;
 }
 
+#details h2 {
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  padding-top: 10px;
+}
+
 .general_section {
-  height: 450px;
   display: flex;
 }
 
 .general_section img {
+  align-self: center;
+  width: 40vw;
+  max-width: 100%;
   margin: 10px;
   border-radius: 5px;
   box-shadow: 0px 0px 6px var(--gray);
 }
 
 .history_description {
-  margin: 25px 25px 50px 25px;
+  margin: 25px 25px 40px 25px;
 }
 
 .basic_info {
   border: var(--darker_green) solid;
   background-color: var(--darker_green);
   box-shadow: 0 0 10px var(--gray);
-  margin: 0px auto;
-  width: 50%;
+  margin: 0px auto 15px auto;
+  width: 60%;
+  max-width: 300px;
   border-radius: 10px;
   text-align: center;
 }
@@ -158,6 +171,24 @@ section h1 {
   padding-right: 10px;
 }
 
+.appearance_section {
+  display: flex;
+  padding: 10px;
+}
+
+.appearance_description {
+  width: 49%;
+}
+
+.colors {
+  width: 51%;
+  display: flex;
+}
+
+.colors div {
+  margin: 0 auto;
+}
+
 footer {
   position: static;
   bottom: 0;
@@ -174,7 +205,7 @@ footer p {
   font-size: 15px;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1050px) {
   section {
     width: 85%;
   }
@@ -194,5 +225,31 @@ footer p {
   .card img {
     width: 70vw;
     max-width: 400px;
+  }
+
+  #details {
+    padding: 0px;
+  }
+
+  .general_section {
+    flex-direction: column;
+  }
+
+  .history_description {
+    margin: 10px;
+  }
+
+  .appearance_section {
+    flex-direction: column;
+  }
+
+  .appearance_description {
+    width: 100%;
+    padding-bottom: 25px;
+  }
+
+  .colors {
+    width: 100%;
+    display: flex;
   }
 }
