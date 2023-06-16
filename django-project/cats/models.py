@@ -23,6 +23,7 @@ class CharacterTrait(models.Model):
 
 class Cat(models.Model):
     name = models.CharField(max_length = 50)
+    image = models.ImageField()
     history = models.CharField(max_length = 600)
     lifespan_min = models.IntegerField()
     lifespan_max = models.IntegerField()
