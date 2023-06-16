@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+:root{
+    --delicate_green: #ecf1eb;
+    --white: #f9f9f9;
+    --green: #ddf5ca;
+    --darker_green: #99a98c;
+    --gray: #3c3c3c;
+    --darker_gray: #1a1a1a;
+}
+
+body {
+  height: 100%;
+  background-color: var(--white);
+  margin: 0;
+  padding: 0;
+  font-family: Raleway;
+}
+
+header {
+  position: relative;
+  text-align: center;
+  color: rgb(49, 49, 49);
+  background-image: linear-gradient(var(--green), var(--darker_green));
+  height: 100px;
+}
+
+header h1 {
+  color: var(--white);
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  text-shadow: 0px 0px 20px var(--darker_gray);
+}
+
+section {
+  margin: auto;
+  width: 70%;
+  padding: 1% 5%;
+  color: var(--darker_gray);
+  text-align: justify;
+}
+
+section p {
+  text-align: justify;
+  font-size: 18px;
+}
+
+section h1 {
+  font-size: 36px;
+}
+
+#cards {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+
+.card {
+  background-color: var(--delicate_green);
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px var(--darker_green);
+}
+
+.card h2 {
+  color: var(--darker_gray);
+  font-size: 24px;
+}
+
+.card p {
+  color: var(--gray);
+  margin-bottom: 10px;
+}
+
+.card button {
+  border: none;
+  font-size: 17px;
+  font-family: Raleway;
+  color: var(--darker_green);
+  font-weight: bolder;
+  background-color: var(--delicate_green);
+  padding: 5px 0px;
+}
+
+.card button:hover {
+  cursor: pointer;
+  background-color: var(--delicate_green);
+  text-shadow: 0px 0px 5px var(--darker_green);
+}
+
+.cat_card{
+    width: 18vw;
+    max-width: 500px;
+    margin: 40px auto 0px auto;
+    padding: 20px;
+    height: fit-content;
+}
+
+.cat_card img {
+    width: 18vw;
+    max-width: 500px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 6px var(--gray);
+}
+
+#details h1{
+    margin: 75px 0 20px 0;
+    text-align: center;
+}
+
+.general_section{
+    height: 450px;
+}
+
+.general_section img {
+    float: left;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 6px var(--gray);
+  }
+
+.history_description{
+    float: left;
+    margin: 10px;
+}
+
+footer {
+  position: static;
+  bottom: 0;
+  margin: 0;
+  width: 100%;
+  background-image: linear-gradient(var(--green), var(--darker_green));
+  color: black;
+  height: 80px;
+}
+
+footer p {
+  text-align: center;
+  padding-top: 30px;
+  font-size: 15px;
+}
+
+@media (max-width: 950px) {
+  section {
+    width: 85%;
+  }
+
+  #cards {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    margin-top: 20px;
+  }
+  .card {
+    width: 70vw;
+    max-width: 400px;
+    margin: 15px auto;
+    padding: 20px;
+  }
+
+  .card img {
+    width: 70vw;
+    max-width: 400px;
+  }
+}

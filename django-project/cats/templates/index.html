@@ -1,9 +1,61 @@
 <!DOCTYPE html>
 <html>
-<body>
-
-<h1>Hello World!</h1>
-<p>Welcome to my first Django project!</p>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/cats/static/style.css" />
+    <script src="script.js" defer></script>
+    <title>Koty</title>
+  </head>
+  <body>
+    <header>
+      <h1>Koty</h1>
+    </header>
+    <section>
+      <div id="cards">
+        <div class="cat_card card">
+          <img src="/cats/static/sfinks.jpg" alt="zdjęcie sfinksa" />
+          <h2>Lorem Ipsum</h2>
+          <p>
+            dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet,
+            nulla et dictum interdum, nisi lorem egestas vitae
+          </p>
+          <button onclick="readMore1()" id="read-more1">Czytaj więcej</button>
+        </div>
+        <div class="cat_card card">
+          <img src="/cats/static/ragdoll.jpg" alt="zdjęcie niedźwiedzi polarnych" />
+          <h2>Lorem Ipsum</h2>
+          <p>
+            dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet,
+            nulla et dictum interdum, nisi lorem egestas vitae 
+          </p>
+          <button onclick="readMore2()" id="read-more2">Czytaj więcej</button>
+        </div>
+        <div class="cat_card card">
+          <img src="/cats/static/syjamski.jpg" alt="zdjęcie ryby" />
+          <h2>Lorem Ipsum</h2>
+          <p>
+            dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet,
+            nulla et dictum interdum, nisi lorem egestas vitae 
+          </p>
+          <button onclick="readMore3()" id="read-more3">Czytaj więcej</button>
+        </div>
+      </div>
+      <div id="details">
+        <h1>SFINX</h1>
+        <div class="general_section card">
+            <img src="/cats/static/sfinks.jpg" alt="zdjęcie sfinksa" />
+            <div class="history_descritpion">
+                The sphynx cat is a Canadian breed originating in Toronto in 1966 from a random genetic mutation. The mutation caused the kitten to be hairless. Some breeders took a liking to the hairless cat and decided to breed individuals that produced consistently hairless offspring. The breed made its way to America, and both American and Canadian breeders continued to develop the new breed, cross-breeding sphynx cats with Devon rex cats, another breed that has little hair. Over time, the sphynx cat was established as a new breed with its own breed standards.
+            </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>
+        Maja Nowakowska 2023
+      </p>
+    </footer>
+  </body>
 </html>
