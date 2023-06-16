@@ -70,10 +70,12 @@ section h1 {
 
 .card p {
   color: var(--gray);
-  margin-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 .card button {
+  position: absolute;
+  bottom: 10px;
   border: none;
   font-size: 17px;
   font-family: Raleway;
@@ -90,11 +92,11 @@ section h1 {
 }
 
 .cat_card{
+  position:relative;
     width: 18vw;
     max-width: 500px;
     margin: 40px auto 0px auto;
     padding: 20px;
-    height: fit-content;
 }
 
 .cat_card img {
