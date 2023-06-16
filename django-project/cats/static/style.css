@@ -123,6 +123,7 @@ section h1 {
   font-family: "Raleway", sans-serif;
   text-align: center;
   padding-top: 10px;
+  margin: 0;
 }
 
 .general_section {
@@ -173,7 +174,7 @@ section h1 {
 
 .appearance_section {
   display: flex;
-  padding: 10px;
+  padding: 25px;
 }
 
 .appearance_description {
@@ -186,6 +187,53 @@ section h1 {
 }
 
 .colors div {
+  margin: 0 auto;
+}
+
+.bottom_section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom_section .card {
+  width: 49%;
+}
+
+.care_section {
+  padding: 25px;
+}
+
+.difficulty {
+  display: flex;
+  justify-content: center;
+  direction: row;
+  align-items: center;
+}
+
+.rate {
+  display: flex;
+  margin-left: 15px;
+}
+
+.rectangle {
+  height: 12px;
+  width: 85px;
+  margin: 0px 6px 11px 0px;
+  border: var(--darker_gray) 1px solid;
+  background-color: var(--darker_green);
+}
+
+.character_section {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+}
+
+.character_description {
+  width: 65%;
+}
+
+.traits {
   margin: 0 auto;
 }
 
@@ -241,6 +289,7 @@ footer p {
 
   .appearance_section {
     flex-direction: column;
+    padding: 10px;
   }
 
   .appearance_description {
@@ -251,5 +300,29 @@ footer p {
   .colors {
     width: 100%;
     display: flex;
+  }
+
+  .bottom_section {
+    flex-direction: column;
+  }
+  .bottom_section .card {
+    width: 70vw;
+    max-width: 400px;
+  }
+  .difficulty {
+    flex-direction: column;
+  }
+
+  .difficulty p {
+    margin-bottom: 5px;
+  }
+
+  .character_section {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .character_description {
+    width: 100%;
   }
 }
