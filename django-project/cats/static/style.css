@@ -242,7 +242,14 @@ section h1 {
   width: 85px;
   margin: 0px 6px 11px 0px;
   border: var(--darker_gray) 1px solid;
+}
+
+.full{
   background-color: var(--darker_green);
+}
+
+.empty{
+  background-color: var(--delicate_green);
 }
 
 .character_section {

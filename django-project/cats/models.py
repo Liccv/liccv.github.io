@@ -60,6 +60,13 @@ class WebsiteContent(models.Model):
     title = models.CharField(max_length = 15)
     button_text = models.CharField(max_length = 30)
     years_text = models.CharField(max_length = 15)
+    appearance_label = models.CharField(max_length = 30)
+    colors_text = models.CharField(max_length = 30)
+    pattern_text = models.CharField(max_length = 30)
+    care_label = models.CharField(max_length = 30)
+    difficulty_text = models.CharField(max_length = 30)
+    character_label = models.CharField(max_length = 30)
+    traits_text = models.CharField(max_length = 30)
 
     def __str__(self):
         return self.title

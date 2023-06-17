@@ -1,14 +1,12 @@
 <!DOCTYPE html>
+{% load static %}
 <html>
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/cats/static/style.css" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <script src="script.js" defer></script>
     <title>Koty</title>
   </head>
@@ -17,52 +15,27 @@
       <h1>Koty</h1>
     </header>
     <div id="language_bar">
-      
       <i class="material-icons">language</i> 
       <div>
-      <button>PL</button>
-      <button>EN</button>
-    </div>
+        <button>PL</button>
+        <button>EN</button>
+      </div>
     </div>
     <section>
       <div id="cards">
+        {% for cat in cats %}
         <div class="cat_card card">
-          <img src="/cats/static/sfinks.jpg" alt="zdjęcie sfinksa" />
-          <h2>Lorem Ipsum</h2>
-          <p>
-            dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet,
-            nulla et dictum interdum, nisi lorem egestas vitae. Phasellus
-            imperdiet, nulla et dictum interdum, nisi lorem egestas vitae
-          </p>
+          <img src="{{ cat.image.url }}" alt="{{ cat.name }} photo" />
+          <h2> {{ cat.name }} </h2>
+          <p> {{ cat.short_description }} </p>
           <button onclick="readMore1()" id="read-more1">Czytaj więcej</button>
         </div>
-        <div class="cat_card card">
-          <img
-            src="/cats/static/ragdoll.jpg"
-            alt="zdjęcie niedźwiedzi polarnych"
-          />
-          <h2>Lorem Ipsum</h2>
-          <p>
-            dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet,
-            nulla et dictum interdum, nisi lorem egestas vitae
-          </p>
-          <button onclick="readMore2()" id="read-more2">Czytaj więcej</button>
-        </div>
-        <div class="cat_card card">
-          <img src="/cats/static/syjamski.jpg" alt="zdjęcie ryby" />
-          <h2>Lorem Ipsum</h2>
-          <p>
-            dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet,
-            nulla et dictum interdum, nisi lorem egestas vitae kc bartus uwu
-          </p>
-          <button onclick="readMore3()" id="read-more3">Czytaj więcej</button>
-        </div>
+        {% endfor %}
       </div>
       <div id="details">
-        <h1>SPHYNX</h1>
+        <h1> SFINKS </h1>
         <div class="general_section card">
           <img src="/cats/static/sfinks.jpg" alt="zdjęcie sfinksa" />
-          <div>
             <div class="history_description">
               <p>
                 The sphynx cat is a Canadian breed originating in Toronto in
@@ -75,7 +48,6 @@
                 cats, another breed that has little hair. Over time, the sphynx
                 cat was established as a new breed with its own breed standards.
               </p>
-            </div>
             <div class="basic_info">
               <div class="row">
                 <i class="material-icons">favorite_border</i>10-14 years
@@ -130,8 +102,10 @@
               <div class="difficulty">
                 <p>Care difficulty: hard</p>
                 <div class="rate">
-                <div class="rectangle"></div><div class="rectangle"></div><div class="rectangle"></div>
-              </div>
+                  <div class="rectangle full"></div>
+                  <div class="rectangle empty"></div>
+                  <div class="rectangle empty"></div>
+                </div>
               </div>
               <p>Her lack of hair doesn't mean less grooming. In reality, she's going to need plenty of upkeep. Cat fur soaks and separates oil secretions, and without it, your kitty's skin can get greasy, dirty, andeven smelly. Sphynxes need at least weekly bathing, regular ear cleaning, and nail trimming to keep them looking and feeling their best.</p></div>
           </div>
