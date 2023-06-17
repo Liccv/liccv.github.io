@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{% static 'style.css' %}" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <script src="script.js" defer></script>
     <title>Koty</title>
   </head>
   <body>
@@ -28,33 +27,24 @@
           <img src="{{ cat.image.url }}" alt="{{ cat.name }} photo" />
           <h2> {{ cat.name }} </h2>
           <p> {{ cat.short_description }} </p>
-          <button onclick="readMore1()" id="read-more1">Czytaj więcej</button>
+          <a href="#{{ cat.name }}">Czytaj więcej</a>
         </div>
         {% endfor %}
       </div>
-      <div id="details">
-        <h1> SFINKS </h1>
+      {% for cat in cats %}
+      <div id="{{ cat.name }}" class="details">
+        <h1> {{ cat.name|upper }} </h1>
         <div class="general_section card">
-          <img src="/cats/static/sfinks.jpg" alt="zdjęcie sfinksa" />
+          <img src="/cats/static/sfinks.jpg" alt="{{ cat.name }} photo" />
             <div class="history_description">
-              <p>
-                The sphynx cat is a Canadian breed originating in Toronto in
-                1966 from a random genetic mutation. The mutation caused the
-                kitten to be hairless. Some breeders took a liking to the
-                hairless cat and decided to breed individuals that produced
-                consistently hairless offspring. The breed made its way to
-                America, and both American and Canadian breeders continued to
-                develop the new breed, cross-breeding sphynx cats with Devon rex
-                cats, another breed that has little hair. Over time, the sphynx
-                cat was established as a new breed with its own breed standards.
-              </p>
+              <p> {{ cat.history }} </p>
             <div class="basic_info">
               <div class="row">
-                <i class="material-icons">favorite_border</i>10-14 years
+                <i class="material-icons">favorite_border</i>{{ cat.lifespan_min }}–{{ cat.lifespan_max }} years
               </div>
-              <div class="row"><i class="material-icons">scale</i>4-9 kg</div>
+              <div class="row"><i class="material-icons">scale</i>{{ cat.weight_min }}–{{ cat.weight_max }} kg</div>
               <div class="row">
-                <i class="material-icons">straighten</i>80-100 cm
+                <i class="material-icons">straighten</i>{{ cat.length_min }}–{{ cat.length_max }} cm
               </div>
             </div>
           </div>
@@ -63,22 +53,16 @@
           <h2>Appearance</h2>
           <div class="appearance_section">
             <div class="appearance_description">
-              <p>
-              Sphynx cats are famous for their (nearly) nude appearance. They
-              trait is lots of visible wrinkles. These kitties aren't actually
-              more wrinkly than other cats, but the lack of thick fur highlights
-              this universal feline trait. Notable traits include piercing
-              lemon-shaped eyes; long, finger-like toes; large, bat-esque ears;
-              and a big, rounded belly.
-            </p>
+              <p>{{ cat.appearance }}</p>
             </div>
             <div class="colors">
               <div>
                 <p>
                 Possible colors:
                 <ul>
-                  <li>white</li>
-                  <li>blue</li>
+                  {% for color in cat.color.all %}
+                  <li>{{ color }}</li>
+                  {% endfor %}
                 </ul>
               </p>
               </div>
@@ -86,9 +70,9 @@
                 <p>
                 Possible patterns:
                 <ul>
-                  <li>point</li>
-                  <li>tabby</li>
-                  <li>lynx</li>
+                  {% for pattern in cat.pattern.all %}
+                  <li> {{ pattern }} </li>
+                  {% endfor %}
                 </ul>
               </p>
               </div>
@@ -100,32 +84,40 @@
             <h2>Care</h2>
             <div class="care_section">
               <div class="difficulty">
-                <p>Care difficulty: hard</p>
+                <p>Care difficulty: {{ cat.care_difficulty }}</p>
                 <div class="rate">
+                  {% if cat.care_difficulty == "easy" or cat.care_difficulty == "łatwa" %}
                   <div class="rectangle full"></div>
                   <div class="rectangle empty"></div>
                   <div class="rectangle empty"></div>
+                  {% elif cat.care_difficulty == "moderate" or cat.care_difficulty == "umiarkowana" %}
+                  <div class="rectangle full"></div>
+                  <div class="rectangle full"></div>
+                  <div class="rectangle empty"></div>
+                  {% else %}
+                  <div class="rectangle full"></div>
+                  <div class="rectangle full"></div>
+                  <div class="rectangle full"></div>
+                  {% endif %}
                 </div>
               </div>
-              <p>Her lack of hair doesn't mean less grooming. In reality, she's going to need plenty of upkeep. Cat fur soaks and separates oil secretions, and without it, your kitty's skin can get greasy, dirty, andeven smelly. Sphynxes need at least weekly bathing, regular ear cleaning, and nail trimming to keep them looking and feeling their best.</p></div>
+                <p> {{ cat.care_description }} </p>
+            </div>
           </div>
             <div class="card">
               <h2>Character</h2>
               <div class="character_section">
                 <div class="character_description">
-                  <p>
-                    These beautiful baldies are curious, outgoing, super smart, and aren't shy about communicating their needs-literally. Sphynxes are noisy, so expect to have a lot of cat chats. Sphynx cats are silly, fun-loving, natural-born entertainers who will 
-                    clown around to get your attention. These social, playful cats love to be loved and will spend hours glued to your side.
-                </p>
+                  <p> {{ cat.temperament }} </p>
                 </div>
                 <div class="traits">
                   <div>
                     <p>
                     Character traits:
                     <ul>
-                      <li>affecionate</li>
-                      <li>curious</li>
-                      <li>smart</li>
+                      {% for trait in cat.character_traits.all %}
+                      <li> {{ trait }} </li>
+                      {% endfor %}
                     </ul>
                   </p>
                   </div>
@@ -134,6 +126,7 @@
           </div>
         </div>
       </div>
+      {% endfor %}
     </section>
     <footer>
       <p>Maja Nowakowska 2023</p>

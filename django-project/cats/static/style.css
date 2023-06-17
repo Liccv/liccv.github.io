@@ -111,7 +111,7 @@ section h1 {
   box-shadow: 0px 0px 6px var(--gray);
 }
 
-.cat_card button {
+.cat_card a {
   position: absolute;
   bottom: 10px;
   border: none;
@@ -121,27 +121,22 @@ section h1 {
   font-weight: bolder;
   background-color: var(--delicate_green);
   padding: 5px 0px;
+  text-decoration: none;
 }
 
-.cat_card button:hover {
-  cursor: pointer;
-  background-color: var(--delicate_green);
-  text-shadow: 0px 0px 5px var(--darker_green);
-}
-
-#details {
+.details {
   max-width: 2100px;
   margin: 0 auto;
   padding: 20px;
 }
 
-#details h1 {
+.details h1 {
   font-family: "Raleway", sans-serif;
   margin: 75px 0 20px 0;
   text-align: center;
 }
 
-#details h2 {
+.details h2 {
   font-family: "Raleway", sans-serif;
   text-align: center;
   padding-top: 10px;
@@ -304,7 +299,7 @@ footer p {
     max-width: 400px;
   }
 
-  #details {
+  .details {
     padding: 0px;
   }
 
