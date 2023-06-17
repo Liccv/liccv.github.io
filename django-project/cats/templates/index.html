@@ -23,6 +23,7 @@
     <section>
       <div id="cards">
         {% for cat in cats %}
+        <script>console.log("{{cats.image.url}}")</script>
         <div class="cat_card card">
           <img src="{{ cat.image.url }}" alt="{{ cat.name }} photo" />
           <h2> {{ cat.name }} </h2>
@@ -35,7 +36,7 @@
       <div id="{{ cat.name }}" class="details">
         <h1> {{ cat.name|upper }} </h1>
         <div class="general_section card">
-          <img src="/cats/static/sfinks.jpg" alt="{{ cat.name }} photo" />
+          <img src="{{ cat.image.url }}" alt="{{ cat.name }} photo" />
             <div class="history_description">
               <p> {{ cat.history }} </p>
             <div class="basic_info">
@@ -128,8 +129,10 @@
       </div>
       {% endfor %}
     </section>
+     <button onclick="topFunction()" id="scroll_button"><i class="material-icons">arrow_upward</i></button>
     <footer>
       <p>Maja Nowakowska 2023</p>
     </footer>
+  <script src="{% static 'script.js' %}"></script>
   </body>
 </html>

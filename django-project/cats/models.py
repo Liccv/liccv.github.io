@@ -34,7 +34,7 @@ class CharacterTrait(models.Model):
 class Cat(models.Model):
     language = models.ForeignKey(Language, on_delete = models.CASCADE)
     name = models.CharField(max_length = 50)
-    image = models.ImageField(upload_to = 'photos/')
+    image = models.ImageField(upload_to = 'media/')
     short_description = models.CharField(max_length = 250)
     history = models.CharField(max_length = 600)
     lifespan_min = models.IntegerField()
@@ -60,13 +60,13 @@ class WebsiteContent(models.Model):
     title = models.CharField(max_length = 15)
     button_text = models.CharField(max_length = 30)
     years_text = models.CharField(max_length = 15)
-    appearance_label = models.CharField(max_length = 30)
-    colors_text = models.CharField(max_length = 30)
-    pattern_text = models.CharField(max_length = 30)
-    care_label = models.CharField(max_length = 30)
-    difficulty_text = models.CharField(max_length = 30)
-    character_label = models.CharField(max_length = 30)
-    traits_text = models.CharField(max_length = 30)
+    appearance_label = models.CharField(max_length = 30, default="Appearance")
+    colors_text = models.CharField(max_length = 30, default="Colors")
+    pattern_text = models.CharField(max_length = 30, default="Patterns")
+    care_label = models.CharField(max_length = 30, default="Care")
+    difficulty_text = models.CharField(max_length = 30, default="Difficulty")
+    character_label = models.CharField(max_length = 30, default="Character")
+    traits_text = models.CharField(max_length = 30, default="Traits")
 
     def __str__(self):
         return self.title

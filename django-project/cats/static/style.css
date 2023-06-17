@@ -261,6 +261,28 @@ section h1 {
   margin: 0 auto;
 }
 
+#scroll_button {
+  display: none;
+  position: fixed;
+  bottom: 5%;
+  right: 4%;
+  z-index: 99;
+  width: 75px;
+  height: 75px;
+  border: none;
+  outline: none;
+  background-color: var(--gray);
+  color: var(--delicate_green);
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 100%;
+  font-size: 30px;
+}
+
+#scroll_button:hover {
+  background-color: var(--darker_gray);
+}
+
 footer {
   position: static;
   bottom: 0;
