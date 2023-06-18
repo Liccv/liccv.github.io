@@ -10,6 +10,15 @@
   --darker_gray: #1a1a1a;
 }
 
+.lang_pl {
+  display: block;
+}
+
+.lang_en {
+  display: none;
+  size: 0;
+}
+
 body {
   height: 100%;
   background-color: var(--white);
@@ -183,10 +192,17 @@ section h1 {
   direction: row;
   align-items: center;
   text-align: left;
+  font-size: 15px;
 }
 
 .row i {
   padding-right: 10px;
+}
+
+.row p {
+  color: var(--delicate_green);
+  font-size: 15px;
+  padding: 0 0 0 5px;
 }
 
 .appearance_section {
@@ -239,11 +255,11 @@ section h1 {
   border: var(--darker_gray) 1px solid;
 }
 
-.full{
+.full {
   background-color: var(--darker_green);
 }
 
-.empty{
+.empty {
   background-color: var(--delicate_green);
 }
 

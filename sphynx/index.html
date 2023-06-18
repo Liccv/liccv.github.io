@@ -1,138 +1,160 @@
 <!DOCTYPE html>
-{% load static %}
 <html>
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'style.css' %}" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <title>Koty</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Sphynx</title>
   </head>
   <body>
     <header>
-      <h1> {{ content.title }} </h1>
+      <h1 class="lang_pl">Sfinks</h1>
+      <h1 class="lang_en">Sphynx</h1>
     </header>
     <div id="language_bar">
-      <i class="material-icons">language</i> 
+      <i class="material-icons">language</i>
       <div>
-        <button>PL</button>
-        <button>EN</button>
+        <button id="button_pl" onclick="plFunction()">PL</button>
+        <button id="button_en" onclick="enFunction()">EN</button>
       </div>
     </div>
     <section>
       <div id="cards">
-        {% for cat in cats %}
-        <script>console.log("{{cats.image.url}}")</script>
         <div class="cat_card card">
-          <img src="{{ cat.image.url }}" alt="{{ cat.name }} photo" />
-          <h2> {{ cat.name }} </h2>
-          <p> {{ cat.short_description }} </p>
-          <a href="#{{ cat.name }}"> {{ content.button_text }} </a>
+          <img src="photos/sfinks.jpg" alt="sphynx photo" />
+          <h2 class="lang_pl">Sfinks</h2>
+          <h2 class="lang_en">Sphynx</h2>
+          <p class="lang_pl">kotek sfinks cute</p>
+          <p class="lang_en">Sphynx is very cute cat</p>
+          <a class="lang_pl" href="#sphynx"> Dowiedz się więcej </a>
+          <a class="lang_en" href="#sphynx"> Learn more </a>
         </div>
-        {% endfor %}
       </div>
-      {% for cat in cats %}
-      <div id="{{ cat.name }}" class="details">
-        <h1> {{ cat.name|upper }} </h1>
+      <div id="sphynx" class="details">
+        <h1 class="lang_pl">SFINKS</h1>
+        <h1 class="lang_en">SPHYNX</h1>
         <div class="general_section card">
-          <img src="{{ cat.image.url }}" alt="{{ cat.name }} photo" />
-            <div class="history_description">
-              <p> {{ cat.history }} </p>
+          <img src="photos/sfinks.jpg" alt="sphynx photo" />
+          <div class="history_description">
+            <p class="lang_pl">
+              kotek z kanady lorem ipsum dolor sit apet nie wiem co pisac
+            </p>
+            <p class="lang_en">
+              cat from canada lorem ipsum dolor sit apet nie wiem co pisac
+            </p>
             <div class="basic_info">
               <div class="row">
-                <i class="material-icons">favorite_border</i>{{ cat.lifespan_min }}–{{ cat.lifespan_max }} {{content.years_text}}
+                <i class="material-icons">favorite_border</i>9–15
+                <p class="lang_pl">lat</p>
+                <p class="lang_en">years</p>
               </div>
-              <div class="row"><i class="material-icons">scale</i>{{ cat.weight_min }}–{{ cat.weight_max }} kg</div>
+              <div class="row"><i class="material-icons">scale</i>2–6 kg</div>
               <div class="row">
-                <i class="material-icons">straighten</i>{{ cat.length_min }}–{{ cat.length_max }} cm
+                <i class="material-icons">straighten</i>33–38 cm
               </div>
             </div>
           </div>
         </div>
         <div class="card">
-          <h2> {{ content.appearance_label }} </h2>
+          <h2 class="lang_pl">Wygląd</h2>
+          <h2 class="lang_en">Appearance</h2>
           <div class="appearance_section">
             <div class="appearance_description">
-              <p>{{ cat.appearance }}</p>
+              <p class="lang_pl">łysol</p>
+              <p class="lang_en">naked</p>
             </div>
             <div class="colors">
               <div>
-                <p>
-                  {{ content.colors_text}}:
-                <ul>
-                  {% for color in cat.color.all %}
-                  <li>{{ color }}</li>
-                  {% endfor %}
+                <p class="lang_pl">Możliwe kolory:</p>
+                <ul class="lang_pl">
+                  <li>biały</li>
+                  <li>czarny</li>
+                  <li>szary</li>
                 </ul>
-              </p>
+                <p class="lang_en">Possible colors:</p>
+                <ul class="lang_en">
+                  <li>white</li>
+                  <li>black</li>
+                  <li>gray</li>
+                </ul>
               </div>
               <div>
-                <p>
-                {{ content.pattern_text }}:
-                <ul>
-                  {% for pattern in cat.pattern.all %}
-                  <li> {{ pattern }} </li>
-                  {% endfor %}
+                <p class="lang_pl">Możliwe umaszczenia:</p>
+                <ul class="lang_pl">
+                  <li>jednolity</li>
                 </ul>
-              </p>
+                <p class="lang_en">Possible patterns:</p>
+                <ul class="lang_en">
+                  <li>solid</li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
         <div class="bottom_section">
           <div class="card">
-            <h2>{{ content.care_label }}</h2>
+            <h2 class="lang_pl">Pielęgnacja</h2>
+            <h2 class="lang_en">Care</h2>
             <div class="care_section">
               <div class="difficulty">
-                <p>{{ content.difficulty_text }}: {{ cat.care_difficulty }}</p>
+                <p class="lang_pl">Trudność pielęgnacji: trudna</p>
+                <p class="lang_en">Care difficulty: hard</p>
                 <div class="rate">
-                  {% if cat.care_difficulty == "easy" or cat.care_difficulty == "łatwa" %}
-                  <div class="rectangle full"></div>
-                  <div class="rectangle empty"></div>
-                  <div class="rectangle empty"></div>
-                  {% elif cat.care_difficulty == "moderate" or cat.care_difficulty == "umiarkowana" %}
-                  <div class="rectangle full"></div>
-                  <div class="rectangle full"></div>
-                  <div class="rectangle empty"></div>
-                  {% else %}
                   <div class="rectangle full"></div>
                   <div class="rectangle full"></div>
                   <div class="rectangle full"></div>
-                  {% endif %}
                 </div>
               </div>
-                <p> {{ cat.care_description }} </p>
+              <p class="lang_pl">
+                kota trzeba kąpać często i przycinać pazurki dbać żeby miał
+                wdzianko
+              </p>
+              <p class="lang_en">
+                you must bath your cute bby cat and let him wear cute clothes
+              </p>
             </div>
           </div>
-            <div class="card">
-              <h2> {{ content.character_label }} </h2>
-              <div class="character_section">
-                <div class="character_description">
-                  <p> {{ cat.temperament }} </p>
+          <div class="card">
+            <h2 class="lang_pl">Charakter</h2>
+            <h2 class="lang_en">Character</h2>
+            <div class="character_section">
+              <div class="character_description">
+                <p class="lang_pl">kot mega szybki lubi ludzi i w ogole cute</p>
+                <p class="lang_en">cat veri fast likes people so cute</p>
+              </div>
+              <div class="traits">
+                <div>
+                  <p class="lang_pl">Cechy charakteru:</p>
+                  <ul class="lang_pl">
+                    <li>mądry</li>
+                    <li>towarzyski</li>
+                    <li>ciekawski</li>
+                  </ul>
+                  <p class="lang_en">Character traits:</p>
+                  <ul class="lang_en">
+                    <li>smart</li>
+                    <li>sociable</li>
+                    <li>curious</li>
+                  </ul>
                 </div>
-                <div class="traits">
-                  <div>
-                    <p>
-                    {{ content.traits_text }}:
-                    <ul>
-                      {% for trait in cat.character_traits.all %}
-                      <li> {{ trait }} </li>
-                      {% endfor %}
-                    </ul>
-                  </p>
-                  </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      {% endfor %}
     </section>
-     <button onclick="topFunction()" id="scroll_button"><i class="material-icons">arrow_upward</i></button>
+    <button onclick="topFunction()" id="scroll_button">
+      <i class="material-icons">arrow_upward</i>
+    </button>
     <footer>
       <p>Maja Nowakowska 2023</p>
     </footer>
-  <script src="{% static 'script.js' %}"></script>
+    <script src="script_scroll.js"></script>
+    <script src="script_lang.js"></script>
   </body>
 </html>
