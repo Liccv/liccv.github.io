@@ -1,0 +1,384 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
+
+:root {
+  --delicate_green: #ecf1eb;
+  --white: #f9f9f9;
+  --green: #ddf5ca;
+  --darker_green: #99a98c;
+  --gray: #3c3c3c;
+  --darker_gray: #1a1a1a;
+}
+
+body {
+  height: 100%;
+  background-color: var(--white);
+  margin: 0;
+  padding: 0;
+  font-family: Raleway;
+}
+
+header {
+  position: relative;
+  color: rgb(49, 49, 49);
+  background-image: linear-gradient(var(--green), var(--darker_green));
+  height: 100px;
+}
+
+header h1 {
+  color: var(--white);
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  text-shadow: 0px 0px 20px var(--darker_gray);
+}
+
+#language_bar {
+  margin: 10px 0 0 10px;
+  color: var(--darker_gray);
+  display: flex;
+  align-items: center;
+}
+
+#language_bar i {
+  font-size: 35px;
+  padding-right: 10px;
+}
+
+.lang_button {
+  cursor: pointer;
+  padding: 5px 10px;
+  background-color: var(--white);
+  border: var(--gray) 1px solid;
+  border-radius: 10px;
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+.lang_button_code {
+  margin: 0;
+}
+
+section {
+  margin: auto;
+  width: 70%;
+  padding: 1% 5%;
+  color: var(--darker_gray);
+  text-align: justify;
+}
+
+section p {
+  text-align: justify;
+  font-size: 18px;
+}
+
+section h1 {
+  font-size: 36px;
+}
+
+#cards {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+
+.card {
+  background-color: var(--delicate_green);
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px var(--darker_green);
+  margin-top: 15px;
+}
+
+.card h2 {
+  color: var(--darker_gray);
+  font-size: 24px;
+}
+
+.card p {
+  color: var(--gray);
+  padding-bottom: 10px;
+}
+
+.cat_card {
+  position: relative;
+  width: 18vw;
+  max-width: 500px;
+  margin: 40px auto 0px auto;
+  padding: 20px;
+}
+
+.cat_card img {
+  width: 18vw;
+  max-width: 500px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 6px var(--gray);
+}
+
+.cat_card a {
+  position: absolute;
+  bottom: 10px;
+  border: none;
+  font-size: 17px;
+  font-family: Raleway;
+  color: var(--darker_green);
+  font-weight: bolder;
+  background-color: var(--delicate_green);
+  padding: 5px 0px;
+  text-decoration: none;
+}
+
+.details {
+  max-width: 2100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.details h1 {
+  font-family: "Raleway", sans-serif;
+  margin: 75px 0 20px 0;
+  text-align: center;
+}
+
+.details h2 {
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  padding-top: 10px;
+  margin: 0;
+}
+
+.general_section {
+  display: flex;
+}
+
+.general_section img {
+  align-self: center;
+  width: 40vw;
+  max-width: 640px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 6px var(--gray);
+}
+
+.history_description {
+  margin: 25px 25px 40px 25px;
+}
+
+.basic_info {
+  border: var(--darker_green) solid;
+  background-color: var(--darker_green);
+  box-shadow: 0 0 10px var(--gray);
+  margin: 0px auto 15px auto;
+  min-width: 175px;
+  max-width: 300px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.basic_info div {
+  width: 130px;
+  margin: 10px auto 10px auto;
+  color: var(--delicate_green);
+  font-weight: bold;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  font-size: 15px;
+}
+
+.row i {
+  padding-right: 10px;
+}
+
+.row p {
+  color: var(--delicate_green);
+  font-size: 15px;
+  padding: 0 0 0 5px;
+  margin: 0;
+}
+
+.appearance_section {
+  display: flex;
+  padding: 25px;
+}
+
+.appearance_description {
+  width: 49%;
+}
+
+.colors {
+  width: 51%;
+  display: flex;
+}
+
+.colors div {
+  margin: 0 auto;
+}
+
+.bottom_section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom_section .card {
+  width: 49%;
+}
+
+.care_section {
+  padding: 25px;
+}
+
+.difficulty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rate {
+  display: flex;
+  margin-left: 15px;
+}
+
+.rectangle {
+  height: 12px;
+  width: 75px;
+  margin: 0px 6px 11px 0px;
+  border: var(--darker_gray) 1px solid;
+}
+
+.full {
+  background-color: var(--darker_green);
+}
+
+.empty {
+  background-color: var(--delicate_green);
+}
+
+.character_section {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+}
+
+.character_description {
+  width: 65%;
+}
+
+.traits {
+  margin: 0 auto;
+}
+
+#scroll_button {
+  display: none;
+  position: fixed;
+  bottom: 5%;
+  right: 4%;
+  z-index: 99;
+  width: 75px;
+  height: 75px;
+  border: none;
+  outline: none;
+  background-color: var(--gray);
+  color: var(--delicate_green);
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 100%;
+  font-size: 30px;
+}
+
+#scroll_button:hover {
+  background-color: var(--darker_gray);
+}
+
+footer {
+  position: static;
+  bottom: 0;
+  margin: 0;
+  width: 100%;
+  background-image: linear-gradient(var(--green), var(--darker_green));
+  color: black;
+  height: 80px;
+}
+
+footer p {
+  text-align: center;
+  padding-top: 30px;
+  font-size: 15px;
+}
+
+@media (max-width: 1050px) {
+  section {
+    width: 85%;
+  }
+
+  #cards {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    margin-top: 20px;
+  }
+  .card {
+    width: 70vw;
+    max-width: 400px;
+    margin: 15px auto;
+    padding: 20px;
+  }
+
+  .card img {
+    width: 70vw;
+    max-width: 400px;
+  }
+
+  .details {
+    padding: 0px;
+  }
+
+  .general_section {
+    flex-direction: column;
+  }
+
+  .history_description {
+    margin: 10px;
+  }
+
+  .appearance_section {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .appearance_description {
+    width: 100%;
+    padding-bottom: 25px;
+  }
+
+  .colors {
+    width: 100%;
+    display: flex;
+  }
+
+  .bottom_section {
+    flex-direction: column;
+  }
+  .bottom_section .card {
+    width: 70vw;
+    max-width: 400px;
+  }
+  .difficulty {
+    flex-direction: column;
+  }
+
+  .difficulty p {
+    margin-bottom: 5px;
+  }
+
+  .character_section {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .character_description {
+    width: 100%;
+  }
+}

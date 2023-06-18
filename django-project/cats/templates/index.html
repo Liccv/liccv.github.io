@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <title>Koty</title>
+  </head>
+  <body>
+    <header>
+      <h1> {{ content.title }} </h1>
+    </header>
+    <div id="language_bar">
+      <i class="material-icons">language</i> 
+      <div>
+        <button>PL</button>
+        <button>EN</button>
+      </div>
+    </div>
+    <section>
+      <div id="cards">
+        {% for cat in cats %}
+        <script>console.log("{{cats.image.url}}")</script>
+        <div class="cat_card card">
+          <img src="{{ cat.image.url }}" alt="{{ cat.name }} photo" />
+          <h2> {{ cat.name }} </h2>
+          <p> {{ cat.short_description }} </p>
+          <a href="#{{ cat.name }}"> {{ content.button_text }} </a>
+        </div>
+        {% endfor %}
+      </div>
+      {% for cat in cats %}
+      <div id="{{ cat.name }}" class="details">
+        <h1> {{ cat.name|upper }} </h1>
+        <div class="general_section card">
+          <img src="{{ cat.image.url }}" alt="{{ cat.name }} photo" />
+            <div class="history_description">
+              <p> {{ cat.history }} </p>
+            <div class="basic_info">
+              <div class="row">
+                <i class="material-icons">favorite_border</i>{{ cat.lifespan_min }}–{{ cat.lifespan_max }} {{content.years_text}}
+              </div>
+              <div class="row"><i class="material-icons">scale</i>{{ cat.weight_min }}–{{ cat.weight_max }} kg</div>
+              <div class="row">
+                <i class="material-icons">straighten</i>{{ cat.length_min }}–{{ cat.length_max }} cm
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <h2> {{ content.appearance_label }} </h2>
+          <div class="appearance_section">
+            <div class="appearance_description">
+              <p>{{ cat.appearance }}</p>
+            </div>
+            <div class="colors">
+              <div>
+                <p>
+                  {{ content.colors_text}}:
+                <ul>
+                  {% for color in cat.color.all %}
+                  <li>{{ color }}</li>
+                  {% endfor %}
+                </ul>
+              </p>
+              </div>
+              <div>
+                <p>
+                {{ content.pattern_text }}:
+                <ul>
+                  {% for pattern in cat.pattern.all %}
+                  <li> {{ pattern }} </li>
+                  {% endfor %}
+                </ul>
+              </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom_section">
+          <div class="card">
+            <h2>{{ content.care_label }}</h2>
+            <div class="care_section">
+              <div class="difficulty">
+                <p>{{ content.difficulty_text }}: {{ cat.care_difficulty }}</p>
+                <div class="rate">
+                  {% if cat.care_difficulty == "easy" or cat.care_difficulty == "łatwa" %}
+                  <div class="rectangle full"></div>
+                  <div class="rectangle empty"></div>
+                  <div class="rectangle empty"></div>
+                  {% elif cat.care_difficulty == "moderate" or cat.care_difficulty == "umiarkowana" %}
+                  <div class="rectangle full"></div>
+                  <div class="rectangle full"></div>
+                  <div class="rectangle empty"></div>
+                  {% else %}
+                  <div class="rectangle full"></div>
+                  <div class="rectangle full"></div>
+                  <div class="rectangle full"></div>
+                  {% endif %}
+                </div>
+              </div>
+                <p> {{ cat.care_description }} </p>
+            </div>
+          </div>
+            <div class="card">
+              <h2> {{ content.character_label }} </h2>
+              <div class="character_section">
+                <div class="character_description">
+                  <p> {{ cat.temperament }} </p>
+                </div>
+                <div class="traits">
+                  <div>
+                    <p>
+                    {{ content.traits_text }}:
+                    <ul>
+                      {% for trait in cat.character_traits.all %}
+                      <li> {{ trait }} </li>
+                      {% endfor %}
+                    </ul>
+                  </p>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </section>
+     <button onclick="topFunction()" id="scroll_button"><i class="material-icons">arrow_upward</i></button>
+    <footer>
+      <p>Maja Nowakowska 2023</p>
+    </footer>
+  <script src="{% static 'script.js' %}"></script>
+  </body>
+</html>
