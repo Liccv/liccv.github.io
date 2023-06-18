@@ -1,0 +1,59 @@
+{
+  "languages": {
+    "pl": {
+      "title": "PL"
+    },
+    "en": {
+      "title": "EN"
+    }
+  },
+
+  "data": {
+    "pl": {
+      "website_content": {
+        "title": "Koty",
+        "card_button": "Dowiedz się więcej"
+      },
+      "cats": {
+        "sphynx": {
+          "photoPath": "photos/sfinks.jpg",
+          "name": "Sfinks",
+          "short_description": "Znany również jako Sfinks Kanadyjski. Rozpoznawalne są ze względu na brak futra."
+        },
+        "ragdoll": {
+          "photoPath": "photos/ragdoll.jpg",
+          "name": "Ragdoll",
+          "short_description": "kot ragdoll tak"
+        },
+        "siamese": {
+          "photoPath": "photos/siamese.jpg",
+          "name": "Syjamski",
+          "short_description": "kot syjamski mega cute uwuś"
+        }
+      }
+    },
+    "en": {
+      "website_content": {
+        "title": "Cats",
+        "card_button": "Learn more"
+      },
+      "cats": {
+        "sphynx": {
+          "photoPath": "photos/sfinks.jpg",
+          "name": "Sphynx",
+          "short_description": "Also known as the Canadian Sphynx, is a breed of cat known for its lack of fur."
+        },
+        "ragdoll": {
+          "photoPath": "photos/ragdoll.jpg",
+          "name": "Ragdoll",
+          "short_description": "Kitty"
+        },
+        "siamese": {
+          "photoPath": "photos/siamese.jpg",
+          "name": "Siamese",
+          "short_description": "Siamese cat uwu owo"
+        }
+      }
+    }
+  }
+}
