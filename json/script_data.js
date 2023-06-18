@@ -36,11 +36,11 @@ function loadData() {
       const card_button = data["data"][lang]["website_content"]["card_button"];
       const cardContainer = document.getElementById("cards");
       cardContainer.innerHTML = "";
-      for (let card in data["data"][lang]["cats"]) {
-        const photoPath = data["data"][lang][card]["photoPath"];
-        const name = data["data"][lang][card]["name"];
-        const short_description = data["data"][lang][card]["short_description"];
-
+      for (let cat in data["data"][lang]["cats"]) {
+        const photoPath = data["data"][lang]["cats"][cat]["photoPath"];
+        const name = data["data"][lang]["cats"][cat]["name"];
+        const short_description = data["data"][lang]["cats"][cat]["short_description"];
+        
         cardContainer.innerHTML +=
           '<div class="cat_card card">\n' +
             '<img src="' +photoPath+'" alt="' +name +'"/>\n' +
@@ -49,6 +49,9 @@ function loadData() {
             '<a href="#' +name+'">' +card_button +'</a>\n'+
           '</div>';
       }
+
+      // Description
+
     });
 }
 
