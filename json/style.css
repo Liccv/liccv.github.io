@@ -10,15 +10,6 @@
   --darker_gray: #1a1a1a;
 }
 
-.lang_pl {
-  display: block;
-}
-
-.lang_en {
-  display: none;
-  size: 0;
-}
-
 body {
   height: 100%;
   background-color: var(--white);
