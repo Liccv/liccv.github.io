@@ -20,10 +20,22 @@
         "length_max": "38"
       },
       "ragdoll": {
-        "photoPath": "photos/ragdoll.jpg"
+        "photoPath": "photos/ragdoll.jpg",
+        "lifespan_min": "13",
+        "lifespan_max": "18",
+        "weight_min": "4",
+        "weight_max": "10",
+        "length_min": "43",
+        "length_max": "53"
       },
       "siamese": {
-        "photoPath": "photos/syjamski.jpg"
+        "photoPath": "photos/syjamski.jpg",
+        "lifespan_min": "15",
+        "lifespan_max": "20",
+        "weight_min": "2",
+        "weight_max": "5",
+        "length_min": "29",
+        "length_max": "36"
       }
     },
     "pl": {
@@ -42,18 +54,25 @@
       "cats": {
         "sphynx": {
           "name": "Sfinks",
-          "short_description": "Znany również jako Sfinks Kanadyjski. Rozpoznawalne są ze względu na brak futra.",
+          "short_description": "Sfinksy kanadyjskie, zwane po prostu sfinksami to jedna z niewielu nagich ras kotów. Są wspaniałymi towarzyszami dla każdego.",
           "history": "Pierwszy sfinks urodził się w miocie zwykłych kotów krótkowłosych w 1966 w Toronto w Kanadzie (nie była to pierwsza bezwłosa mutacja, pod koniec XIX wieku hodowano przez krótki czas rasę zwaną „meksykańskim kotem bezwłosym”). Przez wiele lat hodowcy europejscy i północnoamerykańscy prowadzili selektywną hodowlę bezwłosych kotów. Tak powstała rasa dziś znana. Natychmiast wzbudziła ona zainteresowanie hodowców, którzy zapragnęli mieć tego rodzaju egzotycznego kota. Pierwszy sfinks został zarejestrowany przez amerykańskie The Cat Fanciers' Association (CFA) w lutym 1998.",
           "appearance": "Sfiknsy są znane przez ich (prawie) nagi wygląd. Ich cechą jest to, że mają wiele widocznych zmarszczek, natomiast nie są one bardziej pomarszczone od innych kotów. Brak futra sprawia, że są one dużo bardziej widoczne. Innymi cechami szczególnymi są ich przenikliwe oczy, długie palce, nietoperze uszy i duży, okrągły brzuszek.",
           "colors": {
-            "1": "szary",
+            "1": "płowy",
             "2": "czarny",
-            "3": "kremowy"
+            "3": "kremowy",
+            "4": "niebieski",
+            "5": "czekoladowy",
+            "6": "liliowy",
+            "7": "rudy",
+            "8": "cynamonowy",
+            "9": "szary"
           },
           "patterns": {
             "1": "jednolity",
-            "2": "bikolor",
-            "3": "szylkretowy"
+            "2": "tabby",
+            "3": "szylkretowy",
+            "4": "pointed"
           },
           "care_difficulty": "trudna",
           "care": "Ich brak futra nie oznacza, że nie trzeba o nie dbać. W rzeczywistości potrzebują dużo pielęgnacji. Kocie futro wchłania sebum, a bez niego kocia skóra będzie tłusta, brudna, a nawet śmierdząca. Sfinksy potrzebują kąpieli co najmniej raz w tygodniu, regularnego czyszczenia uszu oraz przycinania pazurów aby utrzymać ich dobry wygląd i samopoczucie.",
@@ -61,39 +80,168 @@
           "traits": {
             "1": "mądry",
             "2": "towarzyski",
-            "3": "figlarny"
+            "3": "figlarny",
+            "4": "ciekawski"
           }
         },
         "ragdoll": {
           "name": "Ragdoll",
-          "short_description": "kot ragdoll tak"
+          "short_description": "Nazwa tej rasy odnosi się do specyficznego zachowania - brane na ręce, reagują wiotczeniem mięśni, co nasuwać może skojarzenia ze szmacianą lalką (po angielsku 'ragdoll').",
+          "history": "Rasa została wyhodowana w Riverside w Kalifornii przez hodowczynię Ann Baker. Zwykła, biała, długowłosa kotka o imieniu Josephine dała kilka miotów charakterystycznych kotów. Josephine nie należała do żadnej konkretnej rasy, podobnie jak samce, które spłodziły oryginalne mioty. Ann Baker sama opisala, że pierwotne koty rasy Ragdoll były 'alley cats' (ulicznymi kotami). Josephine urodziła później kocięta o łagodnym, spokojnym temperamencie, czułym charakterze i tendencji do wiotkości i rozluźnienia po podniesieniu.",
+          "appearance": "Mają silnie zbudowane ciało, pokaźnych rozmiarów posturę oraz proporcjonalne nogi. Ich głowy są szerokie z płaskim czubkiem i szeroką przestrzenią między uszami. Mają długie, muskularne ciało z szeroką klatką i krótką szyją. Ogony są długie i gęste, łapy duże i okrągłe, a sierść jedwabista, gęsta i długa.",
+          "colors": {
+            "1": "kremowy",
+            "2": "czekoladowy",
+            "3": "niebieski",
+            "4": "rudy",
+            "5": "liliowy"
+          },
+          "patterns": {
+            "1": "point",
+            "2": "bikolor",
+            "3": "mitted"
+          },
+          "care_difficulty": "umiarkowana",
+          "care": "Potrzeby pielęgnacyjne Ragdolla są stosunkowo proste. Codzienne czesanie pozwoli zachować dobry wygląd futra, pomocne będzie rozpoczęcie tej czynności na wczesnym etapie życia kociaka. Poświęcenie odpowiedniej ilości czasu dziennie jest kluczem do uniknięcia wizyt u profesjonalnego groomera. Są to bardzo czyste zwierzęta, które same dbają o większość swoich potrzeb, ale nadal mogą wymagać kąpieli. Ragdoll wymaga również innych regularnych zabiegów, takich jak przycinanie pazurów i czyszczenie uszu.",
+          "character": "Ragdolle są inteligentymi, delikatnymi i bardzo czułymi kotami. Kochają i pragną wiele ludzkiej uwagi, ale rzadko są wymagające. Są to koty niezwykle lojalne i oddane swoim ludziom, co czyni je wspaniałymi zwierzętami towarzyszącymi.",
+          "traits": {
+            "1": "odważny",
+            "2": "towarzyski",
+            "3": "uczuciowy",
+            "4": "spokojny"
+          }
         },
         "siamese": {
           "name": "Syjamski",
-          "short_description": "kot syjamski mega cute uwuś"
+          "short_description": "Koty syjamskie słyną ze swego temperamentu. To niezwykle aktywne koty, które wydają się nie znosić nudy.",
+          "history": "Koty syjamskie są uważane za jedną z najstarszych istniejących ras kotów azjatyckich. Pochodzą z Tajlandii (dawnego Syjamu) i były wysoko cenione przez rodzinę królewską. Kiedy zostały sprowadzone do Anglii pod koniec XIX wieku, zawładnęły krajem, gdzie pojawiły się w katalogach i były pożądane przez bogatych. Od tego czasu popularność kotów Syjamskich stale rośnie i są konsekwentnie uznawane za jedną z najpopularniejszych ras kotów w USA.",
+          "appearance": "Koty syjamskie mają szczupłą, długą sylwetkę i smukłe, ale muskularne ciała. Ich długie, cienkie nogi i ogony w połączeniu z kontrastowym umaszczeniem typu point, sprawia, że są natychmiast rozpoznawane. Ze względu na swoją genetykę, każdy kot tej rasy zawsze będzie miał przenikliwe, niebieskie oczy.",
+          "colors": {
+            "1": "biały",
+            "2": "niebieski",
+            "3": "czekoladowy",
+            "4": "liliowy",
+            "5": "cynamonowy",
+            "6": "kremowy"
+          },
+          "patterns": {
+            "1": "point",
+            "2": "tabby"
+          },
+          "care_difficulty": "łatwa",
+          "care": "Ze względu na krótką, nieliniejąca sierść te koty nie wymagają intensywnej pielęgnacji. W rzeczywitości cotygodniowe czesanie, regularne czyszenie uczy i przycinanie pazurów, to wszystko, czego potrzebuje typowy kot Syjamski.",
+          "character": "Koty syjamskie są przyjazne, serdeczne i towarzyskie. Ta piękna rasa jest również jedną z najbardziej inteligentych. Koty te są kochające i ufne w stosunku do ludzi i rozwija się dzięki wielu pozytywnym interakcjom z człowiekiem. Są to także bardzo wrażliwe zwierzęta i wezmą sobie do serca każde ostre słowo.",
+          "traits": {
+            "1": "mądry",
+            "2": "towarzyski",
+            "3": "wrażliwy",
+            "4": "uczuciowy"
+          }
         }
       }
     },
     "en": {
       "website_content": {
         "title": "Cats",
-        "card_button": "Learn more"
+        "card_button": "Learn more",
+        "years_text": "years",
+        "appearance_label": "Appearance",
+        "colors_label": "Possible colors",
+        "patterns_label": "Possible patterns",
+        "care_label": "Care",
+        "difficulty_text": "Care difficulty",
+        "character_label": "Character",
+        "traits_label": "Character traits"
       },
       "cats": {
         "sphynx": {
           "photoPath": "photos/sfinks.jpg",
           "name": "Sphynx",
-          "short_description": "Also known as the Canadian Sphynx, is a breed of cat known for its lack of fur."
+          "short_description": "Also known as the Canadian Sphynx, is a breed of cat known for its lack of fur. They are great companions for everyone.",
+          "history": "The sphynx cat is a Canadian breed originating in Toronto in 1966 from a random genetic mutation. The mutation caused the kitten to be hairless. Some breeders took a liking to the hairless cat and decided to breed individuals that produced consistently hairless offspring. The breed made its way to America, and both American and Canadian breeders continued to develop the new breed, cross-breeding sphynx cats with Devon rex cats, another breed that has little hair. Over time, the sphynx cat was established as a new breed with its own breed standards.",
+          "appearance": "Sphynx cats are famous for their (nearly) nude appearance. They trait is lots of visible wrinkles. These kitties aren't actually more wrinkly than other cats, but the lack of thick fur highlights this universal feline trait. Notable traits include piercing lemon-shaped eyes; long, finger-like toes; large, bat-esque ears; and a big, rounded belly.",
+          "colors":{
+            "1": "fawn",
+            "2": "black",
+            "3": "cream",
+            "4": "blue",
+            "5": "chocolate",
+            "6": "lilac",
+            "7": "orange",
+            "8": "cinnamon",
+            "9": "seal"
+          },
+          "patterns":{
+            "1": "solid",
+            "2": "tabby",
+            "3": "tortoiseshell",
+            "4": "pointed"
+          },
+          "care_difficulty": "hard",
+          "care": "Her lack of hair doesn't mean less grooming. In reality, she's going to need plenty of upkeep. Cat fur soaks and separates oil secretions, and without it, your kitty's skin can get greasy, dirty, andeven smelly. Sphynxes need at least weekly bathing, regular ear cleaning, and nail trimming to keep them looking and feeling their best.",
+          "character": "These beautiful baldies are curious, outgoing, super smart, and aren't shy about communicating their needs-literally. Sphynxes are noisy, so expect to have a lot of cat chats. Sphynx cats are silly, fun-loving, natural-born entertainers who will clown around to get your attention. These social, playful cats love to be loved and will spend hours glued to your side.",
+          "traits":{
+            "1": "smart",
+            "2": "sociable",
+            "3": "playful",
+            "4": "curious"
+          }
         },
         "ragdoll": {
           "photoPath": "photos/ragdoll.jpg",
           "name": "Ragdoll",
-          "short_description": "Kitty"
+          "short_description": "The name of this breed refers to the specific behavior - when taken in the arms, they react with slack muscles, which may bring associations with a ragdoll.",
+          "history": "The breed was developed in Riverside, California, by breeder Ann Baker. A regular, non-pedigreed, white domestic longhaired cat named Josephine produced several litters of typical cats. Josephine was not of any particular breed, nor were the males who sired the original litters. Ann Baker described herself that the original cats of the Ragdoll breed were 'alley cats'. Josephine later produced kittens with a docile, placid temperament, affectionate nature, and a tendency to go limp and relaxed when picked up.",
+          "appearance": "They have a sturdy body, bulky frame, and proportionate legs. Their heads are broad with a flat top and wide space between the ears. They have long, muscular bodies with broad chests and short necks. Their tails are bushy and long in length, their paws are large, round, and tufted, and their coats are silky, dense, and medium to long length.",
+          "colors": {
+            "1": "cream",
+            "2": "chocolate",
+            "3": "blue",
+            "4": "orange",
+            "5": "lilac"
+          },
+          "patterns": {
+            "1": "point",
+            "2": "bicolor",
+            "3": "mitted"
+          },
+          "care_difficulty": "moderate",
+          "care": "The ragdoll's grooming needs are relatively simple. Daily combing will keep a ragdoll in good shape. Starting early in a kitten's life helps and a dedicated amount of time daily is key to avoiding professional groomer visits. These are very clean animals who take care of most of their own needs, but they might still require bathing. Your ragdoll will also need other regular pet upkeep, including nail trimming and ear cleaning.",
+          "character": "The ragdoll's personality is smart, gentle, and super affectionate. These kind kitties love and crave human attention, but they're rarely demanding. Ragdolls are extremely loyal and devoted to their people, making them wonderful companion pets.",
+          "traits":{
+            "1": "bold",
+            "2": "sociable",
+            "3": "affecionate",
+            "4": "gentle"
+          }
         },
         "siamese": {
           "photoPath": "photos/syjamski.jpg",
           "name": "Siamese",
-          "short_description": "Siamese cat uwu owo"
+          "short_description": "Siamese cats are famous for their temperament. They are extremely active cats that seem to hate boredom.",
+          "history": "Siamese cats are considered one of the oldest existing Asian cat breeds. They originated in Thailand (formerly Siam) and were highly prized by royalty. When they were imported to England in the late 19th century, they took these 'Royal Cats of Siam' took the country by storm, where they appeared in catalogues and were coveted by the wealthy. The Siamese has only continued to grow in popularity since then, and is consistently ranked as one of the most popular cat breeds in the U.S.",
+          "appearance": "Siamese cats have a lean, lengthy frame with slim but muscular bodies. His long, thin limbs and tails, coupled with a high-contrast colorpoint pattern, make him instantly recognizable. Because of their genetics, this breed will always have piercing blue eyes.",
+          "colors": {
+            "1": "white",
+            "2": "blue",
+            "3": "chocolate",
+            "4": "lilac",
+            "5": "cinnamon",
+            "6": "cream"
+          },
+          "patterns": {
+            "1": "point",
+            "2": "tabby"
+          },
+          "care_difficulty": "easy",
+          "care": "Because of their short, nonshedding coat, these cats don't need a ton of grooming. In fact, weekly combing, regular ear cleaning, and nail trimming are all a typical Siamese cat requires.",
+          "character": "The Siamese cat's personality is friendly, affectionate, outgoing, and social. This beautiful breed is also one of the most intelligent around. The Siamese is loving and trusting with humans, and he thrives with lots of positive human interaction. He's also deeply sensitive and will take any harsh words to heart.",
+          "traits":{
+            "1": "smart",
+            "2": "sociable",
+            "3": "sensitive",
+            "4": "affecionate"
+          }
         }
       }
     }
