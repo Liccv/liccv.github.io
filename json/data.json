@@ -9,24 +9,66 @@
   },
 
   "data": {
+    "cats":{
+      "sphynx": {
+        "photoPath": "photos/sfinks.jpg",
+        "lifespan_min": "9",
+        "lifespan_max": "15",
+        "weight_min": "2",
+        "weight_max": "6",
+        "length_min": "33",
+        "length_max": "38"
+      },
+      "ragdoll": {
+        "photoPath": "photos/ragdoll.jpg"
+      },
+      "siamese": {
+        "photoPath": "photos/syjamski.jpg"
+      }
+    },
     "pl": {
       "website_content": {
         "title": "Koty",
-        "card_button": "Dowiedz się więcej"
+        "card_button": "Dowiedz się więcej",
+        "years_text": "lat",
+        "appearance_label": "Wygląd",
+        "colors_label": "Możliwe kolory",
+        "patterns_label": "Możliwe umaszczenia",
+        "care_label": "Pielęgnacja",
+        "difficulty_text": "Trudność pielęgnacji",
+        "character_label": "Charakter",
+        "traits_label": "Cechy charakteru"
       },
       "cats": {
         "sphynx": {
-          "photoPath": "photos/sfinks.jpg",
           "name": "Sfinks",
-          "short_description": "Znany również jako Sfinks Kanadyjski. Rozpoznawalne są ze względu na brak futra."
+          "short_description": "Znany również jako Sfinks Kanadyjski. Rozpoznawalne są ze względu na brak futra.",
+          "history": "Pierwszy sfinks urodził się w miocie zwykłych kotów krótkowłosych w 1966 w Toronto w Kanadzie (nie była to pierwsza bezwłosa mutacja, pod koniec XIX wieku hodowano przez krótki czas rasę zwaną „meksykańskim kotem bezwłosym”). Przez wiele lat hodowcy europejscy i północnoamerykańscy prowadzili selektywną hodowlę bezwłosych kotów. Tak powstała rasa dziś znana. Natychmiast wzbudziła ona zainteresowanie hodowców, którzy zapragnęli mieć tego rodzaju egzotycznego kota. Pierwszy sfinks został zarejestrowany przez amerykańskie The Cat Fanciers' Association (CFA) w lutym 1998.",
+          "appearance": "Sfiknsy są znane przez ich (prawie) nagi wygląd. Ich cechą jest to, że mają wiele widocznych zmarszczek, natomiast nie są one bardziej pomarszczone od innych kotów. Brak futra sprawia, że są one dużo bardziej widoczne. Innymi cechami szczególnymi są ich przenikliwe oczy, długie palce, nietoperze uszy i duży, okrągły brzuszek.",
+          "colors": {
+            "1": "szary",
+            "2": "czarny",
+            "3": "kremowy"
+          },
+          "patterns": {
+            "1": "jednolity",
+            "2": "bikolor",
+            "3": "szylkretowy"
+          },
+          "care_difficulty": "trudna",
+          "care": "Ich brak futra nie oznacza, że nie trzeba o nie dbać. W rzeczywistości potrzebują dużo pielęgnacji. Kocie futro wchłania sebum, a bez niego kocia skóra będzie tłusta, brudna, a nawet śmierdząca. Sfinksy potrzebują kąpieli co najmniej raz w tygodniu, regularnego czyszczenia uszu oraz przycinania pazurów aby utrzymać ich dobry wygląd i samopoczucie.",
+          "character": "Te piękne koty są ciekawskie, towarzyskie, bardzo mądre i bez skrupułów zakomunikują swoje potrzeby. Sfiknsy są głośne i rozmowne, więc przygotuj się na dużo pogawędek. Uwielbiają zabawę i będą błaznować żeby zwrócić twoją uwagę. Te towarzyskie i figlarne koty uwielbiają być kochane i będą spędzać z tobą czas godzinami.",
+          "traits": {
+            "1": "mądry",
+            "2": "towarzyski",
+            "3": "figlarny"
+          }
         },
         "ragdoll": {
-          "photoPath": "photos/ragdoll.jpg",
           "name": "Ragdoll",
           "short_description": "kot ragdoll tak"
         },
         "siamese": {
-          "photoPath": "photos/syjamski.jpg",
           "name": "Syjamski",
           "short_description": "kot syjamski mega cute uwuś"
         }
